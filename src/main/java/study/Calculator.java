@@ -7,9 +7,6 @@ import java.util.List;
 public class Calculator {
 
     public static ArrayList<String> splitInput(String str){
-
-        String clean_str = str;
-        String delimiter = ",";
         ArrayList<String> splitList = new ArrayList<>();
 
         if (str.equals("")) {
@@ -17,8 +14,8 @@ public class Calculator {
         }else if (str.startsWith("//") || str.contains("\n")){
             int startIndex = str.indexOf("//");
             int endIndex = str.indexOf("\n");
-            clean_str = str.replace("//","").replace("\n","");
-            delimiter = str.substring(startIndex+2,endIndex);
+            String clean_str = str.replace("//","").replace("\n","");
+            String delimiter = str.substring(startIndex+2,endIndex);
             String[] splitArray = clean_str.split(delimiter);
             splitList.addAll(Arrays.asList(splitArray));
             splitList.remove(0);
