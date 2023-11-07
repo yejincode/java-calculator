@@ -6,13 +6,6 @@ import java.util.List;
 
 public class Calculator {
 
-    // 문자열에 숫자 이외의 값 혹은 음수가 있는지 확인하는 메소드 ->
-
-    // 기본적으로 커스텀 구분자/ 일반 구분자 맞게 split한 후, 각 배열에 담긴 값을 검사해서 숫자 이와의 값, 음수가 있는지 검사한다.
-
-    // 문자열에 커스텀 구분자가 있다면 구분자를 가져오고, 기본 문자열로 세팅하는 메소드
-    // 정리된 문자열을 최종적으로 split 하고, 합을 구하는 메소드
-
     public static ArrayList<String> splitInput(String str){
 
         String clean_str = str;
